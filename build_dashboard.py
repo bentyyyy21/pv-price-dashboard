@@ -8,9 +8,9 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
 INPUT = ROOT / "各省光伏现货电价数据.xlsx"
-OUTPUT_DIR = ROOT / "outputs"
-OUTPUT = OUTPUT_DIR / "各省光伏现货电价数据看板.html"
-REFERENCE_URL = "https://mp.weixin.qq.com/s/2UPt0Y0rkwJH3HBpTzNDkA"
+OUTPUT_DIR = ROOT / "docs"
+OUTPUT = OUTPUT_DIR / "index.html"
+
 
 
 def clean_text(value):
@@ -198,9 +198,7 @@ footer {{ color:var(--muted); font-size:12px; line-height:1.6; padding:18px 14px
 </head>
 <body>
 <header><div class="hero">
-  <div class="eyebrow">数据源：各省光伏现货电价数据.xlsx · 更新口径见原表备注</div>
   <h1>各省光伏现货电价数据看板</h1>
-  <p class="subtitle">把燃煤基准、机制竞价、现货价格、节点电价与结算单参考价放在同一屏里比较。适合手机浏览和微信文件转发，所有图表均为本地渲染，无需联网。</p>
 </div></header>
 <section class="filters">
   <input id="search" placeholder="搜索省份 / 备注 / A-C 说明">
@@ -236,7 +234,6 @@ footer {{ color:var(--muted); font-size:12px; line-height:1.6; padding:18px 14px
   <section class="provinces" id="cards"></section>
 </main>
 <footer>
-  <div>参考公众号链接：{REFERENCE_URL}</div>
   <div>说明：数值由原表文本中首个数字解析而来，类似“无现货、未获取到数据、无结算单”的状态保留在省份详情中；排行榜和均值只统计可解析数字。</div>
 </footer>
 <div class="shade" id="shade"></div>
