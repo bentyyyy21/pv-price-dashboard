@@ -198,7 +198,7 @@ footer {{ color:var(--muted); font-size:12px; line-height:1.6; padding:18px 14px
 </head>
 <body>
 <header><div class="hero">
-  <div class="eyebrow">数据源：各省光伏现货电价数据.xlsx · 更新口径见原表备注</div>
+  </div>
   <h1>各省光伏现货电价数据看板</h1>
   <p class="subtitle">把燃煤基准、机制竞价、现货价格、节点电价与结算单参考价放在同一屏里比较。适合手机浏览和微信文件转发，所有图表均为本地渲染，无需联网。</p>
 </div></header>
